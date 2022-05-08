@@ -1,11 +1,10 @@
 #include <stdio.h>
 int main(void){
-    #ifdef _WIN64
-        printf ("Windows 64");
-    #elif __FreeBSD__
-        printf ("FreeBSD");
+    printf("OS detector ver 0.0.1\n")
+    #ifdef __FreeBSD__
+        printf ("OS detected: FreeBSD\n\n");
     #elif __linux
-        printf ("Linux");
+        printf ("OS detected: Linux\n\n");
     #endif
 
     return 0;
