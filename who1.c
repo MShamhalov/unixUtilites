@@ -1,8 +1,15 @@
 #include <stdio.h>
-#include <utmp.h>
 #include <fcntl.h>
 #include <unistd.h>
 #define SHOWHOST
+
+
+#ifdef __FreeBSD__
+    #include <utmpx.h>
+#elif __linux
+    #include <utmp.h>
+#endif
+
 
 int main(){
     struct utmp current_record;
