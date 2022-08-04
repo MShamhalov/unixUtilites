@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void swap(int, int);
+
 int main (void){
     int a = 21;
     int b = 17;
